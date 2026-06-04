@@ -1,0 +1,72 @@
+{
+  "expo": {
+    "name": "OnlyPets",
+    "slug": "onlypets",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "onlypets",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0A0A"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "app.onlypets",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Camera is used for posting photos and videos of your pets",
+        "NSPhotoLibraryUsageDescription": "Access your photo library to share pet photos",
+        "NSLocationWhenInUseUsageDescription": "Location is used to find other pet owners near you",
+        "NSMicrophoneUsageDescription": "Microphone is used for recording pet videos"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#0A0A0A"
+      },
+      "package": "app.onlypets",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": [
+      ["expo-router", { "root": "app" }],
+      "expo-secure-store",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Camera access for pet photos and videos"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Find pet owners near you"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/notification-icon.png",
+          "color": "#FF6B35"
+        }
+      ],
+      "expo-asset"
+    ],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
