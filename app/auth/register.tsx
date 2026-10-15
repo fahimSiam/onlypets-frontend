@@ -70,7 +70,7 @@ export default function RegisterScreen() {
         {/* Logo */}
         <View style={styles.logoArea}>
           <View style={styles.logoPaw}>
-            <Text style={{ fontSize: 32 }}>🐾</Text>
+            <Text style={{ fontSize: 32 }}>🐠</Text>
           </View>
           <Text style={styles.logoText}>OnlyPets</Text>
           <Text style={styles.logoTagline}>First 6 months completely free</Text>
@@ -126,8 +126,8 @@ export default function RegisterScreen() {
 
           <Text style={styles.terms}>
             By signing up you agree to our{' '}
-            <Text style={{ color: '#FF6B35' }}>Terms</Text> &{' '}
-            <Text style={{ color: '#FF6B35' }}>Privacy Policy</Text>
+            <Text style={{ color: '#6BC24A' }}>Terms</Text> &{' '}
+            <Text style={{ color: '#6BC24A' }}>Privacy Policy</Text>
           </Text>
         </View>
 
@@ -148,9 +148,9 @@ const styles = StyleSheet.create({
   logoArea: { alignItems: 'center', marginBottom: 28 },
   logoPaw: {
     width: 64, height: 64, borderRadius: 32,
-    backgroundColor: '#FF6B35', alignItems: 'center', justifyContent: 'center',
+    backgroundColor: '#6BC24A', alignItems: 'center', justifyContent: 'center',
     marginBottom: 10,
-    shadowColor: '#FF6B35', shadowOffset: { width: 0, height: 6 }, shadowOpacity: 0.4, shadowRadius: 14, elevation: 10,
+    shadowColor: '#6BC24A', shadowOffset: { width: 0, height: 6 }, shadowOpacity: 0.4, shadowRadius: 14, elevation: 10,
   },
   logoText: { fontSize: 28, fontWeight: '800', color: '#FFFFFF', letterSpacing: -0.5 },
   logoTagline: { fontSize: 13, color: '#44CC88', marginTop: 4, fontWeight: '500' },
@@ -168,13 +168,13 @@ const styles = StyleSheet.create({
   input: { flex: 1, color: '#FFFFFF', fontSize: 15 },
   errorText: { color: '#FF4444', fontSize: 12, marginTop: 5, marginLeft: 4 },
   primaryBtn: {
-    backgroundColor: '#FF6B35', borderRadius: 14, height: 52,
+    backgroundColor: '#6BC24A', borderRadius: 14, height: 52,
     alignItems: 'center', justifyContent: 'center', marginTop: 4,
-    shadowColor: '#FF6B35', shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.35, shadowRadius: 12, elevation: 8,
+    shadowColor: '#6BC24A', shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.35, shadowRadius: 12, elevation: 8,
   },
   primaryBtnText: { color: '#FFFFFF', fontSize: 16, fontWeight: '700', letterSpacing: 0.2 },
   terms: { color: '#555', fontSize: 12, textAlign: 'center', marginTop: 16, lineHeight: 18 },
   footer: { flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 28 },
   footerText: { color: '#666', fontSize: 14 },
-  footerLink: { color: '#FF6B35', fontSize: 14, fontWeight: '600' },
+  footerLink: { color: '#6BC24A', fontSize: 14, fontWeight: '600' },
 });

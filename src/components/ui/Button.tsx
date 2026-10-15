@@ -12,9 +12,9 @@ interface ButtonProps {
 }
 
 const variants = {
-  primary: { bg: '#FF6B35', text: '#FFFFFF', border: 'transparent' },
+  primary: { bg: '#6BC24A', text: '#FFFFFF', border: 'transparent' },
   secondary: { bg: '#2EC4B6', text: '#FFFFFF', border: 'transparent' },
-  outline: { bg: 'transparent', text: '#FF6B35', border: '#FF6B35' },
+  outline: { bg: 'transparent', text: '#6BC24A', border: '#6BC24A' },
   ghost: { bg: 'transparent', text: '#FFFFFF', border: 'transparent' },
   danger: { bg: '#FF4444', text: '#FFFFFF', border: 'transparent' },
 };

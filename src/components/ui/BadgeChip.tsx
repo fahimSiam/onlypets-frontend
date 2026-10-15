@@ -5,7 +5,7 @@ const BADGE_COLORS: Record<string, string> = {
   rookie: '#2EC4B6',
   regular: '#4A90E2',
   pro: '#9B59B6',
-  influencer: '#FF6B35',
+  influencer: '#6BC24A',
 };
 
 const BADGE_ICONS: Record<string, string> = {

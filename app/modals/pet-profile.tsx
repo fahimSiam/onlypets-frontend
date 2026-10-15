@@ -94,12 +94,12 @@ export default function PetProfileModal() {
                 <Text style={{ color: '#FFFFFF', fontWeight: '800', fontSize: 20 }}>{pet.name}</Text>
                 {pet.hasInfluencerBadge && (
                   <View style={{
-                    backgroundColor: '#FF6B3522',
+                    backgroundColor: '#6BC24A22',
                     borderRadius: 10,
                     paddingHorizontal: 8,
                     paddingVertical: 3,
                     borderWidth: 1,
-                    borderColor: '#FF6B3544',
+                    borderColor: '#6BC24A44',
                     flexDirection: 'row',
                     alignItems: 'center',
                     gap: 3,

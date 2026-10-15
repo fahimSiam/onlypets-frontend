@@ -28,7 +28,7 @@ export function MessageBubble({ message, isOwn }: MessageBubbleProps) {
         </View>
       ) : (
         <View style={{
-          backgroundColor: isOwn ? '#FF6B35' : '#1A1A1A',
+          backgroundColor: isOwn ? '#6BC24A' : '#1A1A1A',
           borderRadius: 18,
           borderBottomRightRadius: isOwn ? 4 : 18,
           borderBottomLeftRadius: isOwn ? 18 : 4,

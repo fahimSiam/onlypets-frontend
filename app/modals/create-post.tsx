@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
   headerBtn: { padding: 4 },
   headerTitle: { fontSize: 17, fontWeight: '700', color: '#FFFFFF' },
   shareBtn: {
-    backgroundColor: '#FF6B35', borderRadius: 20,
+    backgroundColor: '#6BC24A', borderRadius: 20,
     paddingHorizontal: 20, paddingVertical: 8,
   },
   shareBtnDisabled: { opacity: 0.4 },

@@ -33,7 +33,7 @@ export function AddStoryBubble({ onPress }: { onPress: () => void }) {
         backgroundColor: '#1A1A1A', alignItems: 'center', justifyContent: 'center',
         borderWidth: 1.5, borderColor: '#2A2A2A', borderStyle: 'dashed',
       }}>
-        <Text style={{ color: '#FF6B35', fontSize: 28, lineHeight: 32 }}>+</Text>
+        <Text style={{ color: '#6BC24A', fontSize: 28, lineHeight: 32 }}>+</Text>
       </View>
       <Text style={{ color: '#888', fontSize: 11, marginTop: 4 }}>Add Story</Text>
     </TouchableOpacity>

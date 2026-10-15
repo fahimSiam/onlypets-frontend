@@ -18,6 +18,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useState } from 'react';
 import { authService } from '../../src/services/auth.service';
 import { useAuthStore } from '../../src/stores/auth.store';
+import { useGoogleAuth } from '../../src/hooks/useGoogleAuth';
 
 const schema = z.object({
   email: z.string().email('Invalid email'),
@@ -28,6 +29,11 @@ type FormData = z.infer<typeof schema>;
 export default function LoginScreen() {
   const { setUser } = useAuthStore();
   const [showPassword, setShowPassword] = useState(false);
+  const {
+    signIn: googleSignIn,
+    loading: googleLoading,
+    error: googleError,
+  } = useGoogleAuth(() => router.replace('/tabs/feed'));
 
   const { control, handleSubmit, formState: { errors, isSubmitting } } =
     useForm<FormData>({ resolver: zodResolver(schema) });
@@ -56,7 +62,7 @@ export default function LoginScreen() {
         {/* Logo */}
         <View style={styles.logoArea}>
           <View style={styles.logoPaw}>
-            <Text style={styles.logoPawEmoji}>🐾</Text>
+            <Text style={styles.logoPawEmoji}>🐠</Text>
           </View>
           <Text style={styles.logoText}>OnlyPets</Text>
           <Text style={styles.logoTagline}>Share your pet's world</Text>
@@ -149,10 +155,18 @@ export default function LoginScreen() {
           </View>
 
           {/* Google button */}
-          <TouchableOpacity style={styles.socialBtn} activeOpacity={0.8}>
+          <TouchableOpacity
+            style={[styles.socialBtn, googleLoading && styles.primaryBtnDisabled]}
+            activeOpacity={0.8}
+            onPress={googleSignIn}
+            disabled={googleLoading}
+          >
             <Text style={styles.socialIcon}>G</Text>
-            <Text style={styles.socialText}>Continue with Google</Text>
+            <Text style={styles.socialText}>
+              {googleLoading ? 'Connecting…' : 'Continue with Google'}
+            </Text>
           </TouchableOpacity>
+          {googleError && <Text style={styles.errorText}>{googleError}</Text>}
         </View>
 
         {/* Sign up link */}
@@ -186,11 +200,11 @@ const styles = StyleSheet.create({
     width: 72,
     height: 72,
     borderRadius: 36,
-    backgroundColor: '#FF6B35',
+    backgroundColor: '#6BC24A',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 12,
-    shadowColor: '#FF6B35',
+    shadowColor: '#6BC24A',
     shadowOffset: { width: 0, height: 8 },
     shadowOpacity: 0.4,
     shadowRadius: 16,
@@ -265,17 +279,17 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
   forgotText: {
-    color: '#FF6B35',
+    color: '#6BC24A',
     fontSize: 13,
     fontWeight: '500',
   },
   primaryBtn: {
-    backgroundColor: '#FF6B35',
+    backgroundColor: '#6BC24A',
     borderRadius: 14,
     height: 52,
     alignItems: 'center',
     justifyContent: 'center',
-    shadowColor: '#FF6B35',
+    shadowColor: '#6BC24A',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.35,
     shadowRadius: 12,
@@ -337,7 +351,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   footerLink: {
-    color: '#FF6B35',
+    color: '#6BC24A',
     fontSize: 14,
     fontWeight: '600',
   },

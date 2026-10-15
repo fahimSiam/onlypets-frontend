@@ -11,7 +11,7 @@ interface AvatarProps {
 
 export function Avatar({ uri, size = 40, name, hasStory = false, className }: AvatarProps) {
   const initials = name ? name.slice(0, 2).toUpperCase() : '?';
-  const ringColor = hasStory ? '#FF6B35' : 'transparent';
+  const ringColor = hasStory ? '#6BC24A' : 'transparent';
 
   return (
     <View

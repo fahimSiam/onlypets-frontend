@@ -31,7 +31,7 @@ export default function SettingsModal() {
     <TouchableOpacity style={styles.row} onPress={onPress} activeOpacity={0.7}>
       <View style={styles.rowLeft}>
         <View style={[styles.rowIcon, danger && styles.rowIconDanger]}>
-          <Ionicons name={icon as any} size={18} color={danger ? '#FF4444' : '#FF6B35'} />
+          <Ionicons name={icon as any} size={18} color={danger ? '#FF4444' : '#6BC24A'} />
         </View>
         <Text style={[styles.rowLabel, danger && styles.rowLabelDanger]}>{label}</Text>
       </View>
@@ -156,8 +156,8 @@ const styles = StyleSheet.create({
   },
   profileAvatar: {
     width: 52, height: 52, borderRadius: 26,
-    backgroundColor: '#FF6B3522', alignItems: 'center', justifyContent: 'center',
-    borderWidth: 2, borderColor: '#FF6B35',
+    backgroundColor: '#6BC24A22', alignItems: 'center', justifyContent: 'center',
+    borderWidth: 2, borderColor: '#6BC24A',
   },
   profileName: { color: '#FFFFFF', fontWeight: '700', fontSize: 16 },
   profileUsername: { color: '#666', fontSize: 13, marginTop: 2 },
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
   rowLeft: { flexDirection: 'row', alignItems: 'center', gap: 12 },
   rowIcon: {
     width: 32, height: 32, borderRadius: 8,
-    backgroundColor: '#FF6B3515', alignItems: 'center', justifyContent: 'center',
+    backgroundColor: '#6BC24A15', alignItems: 'center', justifyContent: 'center',
   },
   rowIconDanger: { backgroundColor: '#FF444415' },
   rowLabel: { color: '#FFFFFF', fontSize: 15 },

@@ -50,9 +50,9 @@ export function ProfileHeader({
       )}
 
       <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 8, gap: 6 }}>
-        <Text style={{ color: '#FF6B35', fontWeight: '600', fontSize: 13 }}>⭐ {user.totalPoints.toLocaleString()} pts</Text>
+        <Text style={{ color: '#6BC24A', fontWeight: '600', fontSize: 13 }}>⭐ {user.totalPoints.toLocaleString()} pts</Text>
         {user.currentStreak > 1 && (
-          <Text style={{ color: '#FF6B35', fontSize: 13 }}>🔥 {user.currentStreak} day streak</Text>
+          <Text style={{ color: '#6BC24A', fontSize: 13 }}>🔥 {user.currentStreak} day streak</Text>
         )}
       </View>
 

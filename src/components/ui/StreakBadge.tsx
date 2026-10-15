@@ -5,7 +5,7 @@ export function StreakBadge({ count }: { count: number }) {
   return (
     <View style={{ flexDirection: 'row', alignItems: 'center', gap: 2 }}>
       <Text style={{ fontSize: 16 }}>🔥</Text>
-      <Text style={{ color: '#FF6B35', fontWeight: '700', fontSize: 14 }}>{count}</Text>
+      <Text style={{ color: '#6BC24A', fontWeight: '700', fontSize: 14 }}>{count}</Text>
     </View>
   );
 }

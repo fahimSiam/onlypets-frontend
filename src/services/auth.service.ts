@@ -29,6 +29,16 @@ export const authService = {
     return res.data.data;
   },
 
+  // Native Google sign-in: the app obtains a Google ID token on-device
+  // (see useGoogleAuth), then exchanges it with the backend for our JWTs.
+  async loginWithGoogle(idToken: string): Promise<AuthResponse> {
+    const res = await apiClient.post<{ data: AuthResponse }>('/auth/google/mobile', {
+      idToken,
+    });
+    await saveTokens(res.data.data);
+    return res.data.data;
+  },
+
   async logout(): Promise<void> {
     await SecureStore.deleteItemAsync('accessToken');
     await SecureStore.deleteItemAsync('refreshToken');
